@@ -1,0 +1,210 @@
+@import url('http://fonts.googleapis.com/css/?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: linear-gradient(#8b016a,#6f1159);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent,#ffb423);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background: linear-gradient(transparent,#ed8a0a);
+}
+#header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo
+{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2em;
+}
+#header .navigation
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .navigation li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+#header .navigation li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+#header .navigation li a:hover,
+#header .navigation li a.active
+{
+    background: #fff;
+    color: #111;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+section img
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+section img#lamp
+{
+    mix-blend-mode: screen;
+}
+section img#masjid
+{
+    transform: translateY(-12px);
+}
+section img#stars2
+{
+    display: none;
+}
+#text
+{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    color: #fff;
+    transform: translateY(-50%);
+    font-size: 10vw;
+    white-space: nowrap;
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+    font-family: 'Rancho', cursive;
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #96283a;
+}
+.sec h2
+{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.sec p
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+@media (max-width: 992px)
+{
+    #header
+    {
+        padding: 20px;
+    }
+    #header .logo
+    {
+        font-size: 1.5em;
+    }
+    #header .navigation
+    {
+        display: none;
+    }
+    #header .navigation.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: #6f1159;
+    }
+    #header .navigation li
+    {
+        margin-left: 0;
+    }
+    #header .navigation li a
+    {
+        font-size: 1.5em;
+        margin: 5px 0;
+        border-radius: 30px;
+        display: inline-block;
+    }
+    .toggle
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(img/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 100000;
+        margin-right: 40px;
+    }
+    .toggle.active
+    {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: url(img/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .sec
+    {
+        padding: 20px;
+    }
+    .sec h2
+    {
+        font-size: 1.5em;
+    }
+    section img#stars2
+    {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+    section img#masjid
+    {
+        transform: translateY(-2px);
+    }
+}
